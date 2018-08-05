@@ -1,0 +1,51 @@
+{
+  "shopitems": [
+    {
+      "src": "image/shop/cloth1.png",
+      "itemName": "옷1",
+      "price": "1000"
+    },
+    {
+      "src": "image/shop/cloth1.png",
+      "itemName": "옷2",
+      "price": "1000"
+    },
+    {
+      "src": "image/shop/cloth1.png",
+      "itemName": "옷3",
+      "price": "1000"
+    }
+  ],
+  "vintageitems" : [
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지1",
+      "price" : "1000"
+    },
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지2",
+      "price" : "1000"
+    },
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지3",
+      "price" : "1000"
+    },
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지4",
+      "price" : "1000"
+    },
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지5",
+      "price" : "1000"
+    },
+    {
+      "src" : "image/vintage/vintage1.png",
+      "itemName" : "빈티지6",
+      "price" : "1000"
+    }
+  ]
+}

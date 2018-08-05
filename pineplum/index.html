@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pineplum</title>
+    <style>
+        #head {
+            top: 0px;
+            height: 10%;
+            width: 100%;
+            position: fixed;
+            background-color: white;
+        }
+
+        #title {
+            font-size: 300%;
+            font-weight: 700;
+            padding-left: 5%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            background-color: white;
+        }
+
+        #menu {
+            text-align: center;
+            background-color: white;
+        }
+
+        #nav {
+            padding-right: 5%;
+            padding-top: 5%;
+            position: fixed;
+            top:300px;
+            right: 0px;
+
+        }
+
+        #content {
+            width: 100%;
+            margin-top: 5%;
+            padding-top: 10%;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+
+        #footer {
+            padding: 2% 20%;
+            text-align: center;
+        }
+
+        #footer > span {
+            font-size: 12px;
+            font-style: italic;
+            color: gray;
+        }
+
+        #shopDiv {
+            width: 700px;
+            margin: 0 auto;
+            overflow: scroll;
+        }
+
+        .shopItem {
+            float: left;
+            display: inline-block;
+            //padding-right: 15px;
+        }
+
+        .shopItem > img {
+            width: 350px;
+            height: 350px;
+        }
+        .itemName {
+            width: 300px;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 12px;
+            font-style: italic;
+        }
+
+
+        .slider {
+            width: 60%;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 1px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: 1;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+    </style>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
+</head>
+<body>
+<div id="head">
+    <div id="title"><a href="/" style="text-decoration: none; color: black;">PINEPLUM</a></div>
+    <div id="menu">
+    </div>
+</div>
+<div id="nav">
+    <a><img style="width:15px;height:15px;margin-right: 2px;" src="image/instagram.png"/>instagram</a><br/>
+    <a><img style="width:30px;height:15px;margin-right: 2px;" src="image/youtube.png"/>youtube</a>
+    <p style="font-size: 13px;font-weight: 700;">신한 은행<br/>예금주 : 최인혜<br/>110-366-163496</p>
+    <p style="font-style: italic;font-size: 18px; color: dimgray">cart</p>
+</div>
+<div id="content">
+</div>
+
+<div id="footer">
+    <hr/>
+    <span>사업자 등록</span>
+    <span>/</span>
+    <span>PRIVACY</span>
+    <span>/</span>
+    <span>CONTACT</span>
+
+</div>
+
+</body>
+<script src="static/requirejs/require.js"></script>
+<script src="static/require.config.js"></script>
+<script src="static/index.js"></script>
+
+</html>
