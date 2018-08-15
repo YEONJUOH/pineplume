@@ -1,0 +1,30 @@
+<div id="detail">
+    <img src="{{:src}}">
+
+    <div id="ditailInfo">
+        <select>
+            <option>필수 옵션을 선택해 주세요</option>
+            {{for options}}
+            <option value="{{>}}">{{>}}</option>
+            {{/for}}
+        </select>
+        <br/>
+        <span style="background-color: gray;margin-right: 4px;">Add To Cart </span>
+        <span style="background-color: dimgray;">Buy Now</span>
+        <br/>
+    </div>
+    <div id="infoTab">
+        <span class="infoTabSelected"> Description </span>
+        <span> Size </span>
+        <span> Care </span>
+    </div>
+
+    <div id="description" style="width: 400px;margin:0 auto;margin-top: 10px;text-align: left;">
+        {{:description}}
+    </div>
+    <div id="detailImages" style="margin-top: 30px">
+        {{for detailImages}}
+        <img src="{{>}}">
+        {{/for}}
+    </div>
+</div>

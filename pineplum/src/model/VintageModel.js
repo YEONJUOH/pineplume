@@ -4,16 +4,20 @@
 define([
     "jquery",
     "text!html/vintage.html",
+    "model/DetailModel",
     "slick-carousel",
     "jsrender"
 ], function ($,
-             vintage, slick) {
+             vintage,
+             detail,
+             slick,
+             jsrender) {
     function VindtageModel() {
         this.render = function () {
 
             $.getJSON("/static/item.json")
-                .done(function(data) {
-                    var template = $.templates(vintage).render(data);
+                .done(function (data) {
+                    var template = jsrender.templates(vintage).render(data);
                     $("#content").html(template);
                     $(".regular").slick({
                         dots: true,
@@ -32,11 +36,14 @@ define([
                         $(e.target).css("opacity", 1);
                     });
 
+                    $('img').click(function (e) {
+                        var itemName = $(e.target).parent().find("input").val();
+                        detail.render("vintageitems", itemName);
+                    })
 
                 }.bind(this));
-            
 
-            
+
         }.bind(this);
 
 
