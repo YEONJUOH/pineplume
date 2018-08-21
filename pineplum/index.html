@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>pineplum</title>
     <style>
+
+        @font-face {
+            font-family: 'NanumBarunGothic';
+            font-style: normal;
+            font-weight: 300;
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+            src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+        }
+
+        * {font-family: NanumBarunGothic}
+
         #head {
             top: 0px;
             height: 10%;
@@ -114,7 +125,7 @@
             height: 350px;
         }
 
-        #ditailInfo > span {
+        #ditailInfo > span, .buyNow {
             color: white;
             font-size: 17px;
             border-radius: 4px;
@@ -152,6 +163,16 @@
             border-bottom: solid 1px;
         }
 
+        th {
+            border-bottom: solid 1px;
+        }
+
+        td {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: solid 1px gainsboro;
+        }
+
     </style>
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
@@ -166,10 +187,6 @@
     </div>
 </div>
 <div id="nav">
-    <a><img style="width:15px;height:15px;margin-right: 2px;" src="image/instagram.png"/>instagram</a><br/>
-    <a><img style="width:30px;height:15px;margin-right: 2px;" src="image/youtube.png"/>youtube</a>
-    <p style="font-size: 13px;font-weight: 700;">신한 은행<br/>예금주 : 최인혜<br/>110-366-163496</p>
-    <p style="font-style: italic;font-size: 18px; color: dimgray">cart</p>
 </div>
 <div id="content">
 
@@ -181,7 +198,7 @@
     <span>/</span>
     <span>PRIVACY</span>
     <span>/</span>
-    <span>CONTACT</span>
+    <span><a style="link: none;" href="mailto:eorol2@naver.com">CONTACT</a></span>
 
 </div>
 

@@ -1,0 +1,27 @@
+<table style="margin: 0 auto;width: 50%;border-collapse: collapse">
+    <tr>
+        <th></th>
+        <th>itemName</th>
+        <th>option</th>
+        <th>price</th>
+        <th>Qty</th>
+        <th>choice</th>
+    </tr>
+    {{for itemList}}
+    <tr>
+        <td><img src="{{:src}}" style="width: 30px;height: 30px"></td>
+        <td class="name">{{:name}}</td>
+        <td class="option">{{:option}}</td>
+        <td>{{:moneyString}}</td>
+        <td>1</td>
+        <td style="color: dimgray;font-style: italic" class="delete">delete</td>
+    </tr>
+    {{/for}}
+
+</table>
+<br/>
+<br/>
+{{if subTotal}}
+<span>Sub Total {{:subTotal}} + Shipping {{:shipCost}} = Total : {{:total}}</span>
+<span class="buyNow" style="background-color: dimgray;">Buy Now</span>
+{{/if}}

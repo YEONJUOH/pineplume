@@ -5,15 +5,23 @@ define([
     "jquery",
     "text!html/shop.html",
     "model/DetailModel",
+    "model/UtilModel",
     "jsrender"
 ], function ($,
              shop,
              detail,
+             util,
              jsrender) {
     function ShopModel() {
         this.render = function () {
             $.getJSON("/static/item.json")
                 .done(function (data) {
+
+                    for (var i = 0; i < data.shopitems.length; i++) {
+                        var price = data.shopitems[i].price;
+                        data.shopitems[i].price = util.moneyString(price);
+                    }
+
                     var template = jsrender.templates(shop).render(data);
                     $("#content").html(template);
 

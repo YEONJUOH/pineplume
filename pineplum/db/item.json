@@ -1,11 +1,11 @@
 {
   "shopitems": [
     {
-      "src": "image/shop/cloth1.png",
+      "src": "static/shop/cloth1.png",
       "itemName": "옷1",
       "price": "1000",
       "detailImages" :[
-        "image/shop/cloth1.png"
+        "static/shop/cloth1.png"
       ],
       "options" : [
         "volvo",
@@ -16,44 +16,44 @@
       "description" : "        충청 남부와 남부지방, 제주도에는 이날 낮부터 16일 낮까지 비가 오겠다. 비가 내리는 지역에는 천둥·번개가 내리치고 시간당 20∼30㎜의 강한 비가 쏟아지겠으니 시설물 관리에 유의해야 한다.\n\n        예상강수량은 전남 남해안·경남 해안·제주도·지리산 부근 30∼80㎜, 전남(남해안 제외)·강원 영동·경상도(경남 해안 제외) 20∼60㎜, 울릉도와 독도·전북·충청 남부·강원 영서 남부\n        5∼40㎜다.\n\n        비가 내리면서 강원 영동과 남부지방의 폭염은 일시적으로 주춤하겠으나 그 밖의 지역은 폭염이 계속될 것으로 기상청은 예측했다."
     },
     {
-      "src": "image/shop/cloth1.png",
+      "src": "static/shop/cloth1.png",
       "itemName": "옷2",
       "price": "1000"
     },
     {
-      "src": "image/shop/cloth1.png",
+      "src": "static/shop/cloth1.png",
       "itemName": "옷3",
       "price": "1000"
     }
   ],
   "vintageitems" : [
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지1",
       "price" : "1000"
     },
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지2",
       "price" : "1000"
     },
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지3",
       "price" : "1000"
     },
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지4",
       "price" : "1000"
     },
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지5",
       "price" : "1000"
     },
     {
-      "src" : "image/vintage/vintage1.png",
+      "src" : "static/vintage/vintage1.png",
       "itemName" : "빈티지6",
       "price" : "1000"
     }

@@ -5,11 +5,11 @@ require([
     "model/MainModel",
     "model/MenuModel",
     "model/ShopModel",
-    "model/VintageModel"
-], function (main, menu, shop, vintage) {
+    "model/VintageModel",
+    "model/SideModel"
+], function (main, menu, shop, vintage, side) {
     main.render();
     menu.render();
-   //shop.render();
-   // vintage.render();
+    side.render();
 
 });

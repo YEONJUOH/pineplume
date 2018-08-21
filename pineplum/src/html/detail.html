@@ -1,16 +1,23 @@
 <div id="detail">
     <img src="{{:src}}">
-
+    <div>
+        <span id="itemName" class="itemName">{{:itemName}}</span>
+    </div>
+    <div>
+        <span class="price" >{{:moneyString}}</span>
+        <input type="hidden" id="price" value="{{:price}}"/>
+    </div>
+    <br/>
     <div id="ditailInfo">
         <select>
-            <option>필수 옵션을 선택해 주세요</option>
+            <option value="noOption">필수 옵션을 선택해 주세요</option>
             {{for options}}
             <option value="{{>}}">{{>}}</option>
             {{/for}}
         </select>
         <br/>
-        <span style="background-color: gray;margin-right: 4px;">Add To Cart </span>
-        <span style="background-color: dimgray;">Buy Now</span>
+        <span id="addToCart" style="background-color: gray;margin-right: 4px;">Add To Cart </span>
+        <span class="buyNow" style="background-color: dimgray;">Buy Now</span>
         <br/>
     </div>
     <div id="infoTab">
