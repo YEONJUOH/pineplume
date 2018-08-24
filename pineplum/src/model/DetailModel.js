@@ -50,22 +50,28 @@ define([
 
                     $("#addToCart").click(function (e) {
 
-                        if($("select option").length!=1&& $("select option:selected").val()=="noOption") {
+                        if ($("select option").length != 1 && $("select option:selected").val() == "noOption") {
                             alert("옵션을 선택해주세요");
                             return;
                         }
 
-                        var url = '/setCookie' +'?name=' + item.itemName + '&option=' + $("select option:selected").val()
-                        + '&price=' + item.price +'&src=' + item.src;
-                        console.log("src" + item.src);
+                        var url = '/setCookie' + '?name=' + item.itemName + '&option=' + $("select option:selected").val()
+                            + '&price=' + item.price + '&src=' + item.src;
 
                         $.ajax({
-                            url:url,
-                            success:function(data){
+                            url: url,
+                            success: function (data) {
                                 cart.render();
                             }
                         })
-                    })
+                    });
+
+
+                    $("#buyNow").click(function (e) {
+
+
+                    });
+
 
                 }.bind(this));
         }.bind(this);
