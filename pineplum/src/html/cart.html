@@ -21,7 +21,7 @@
 </table>
 <br/>
 <br/>
-{{if subTotal}}
+{{if subTotal && subTotal !='￦0'}}
 <span>Sub Total {{:subTotal}} + Shipping {{:shipCost}} = Total : {{:total}}</span>
-<span class="buyNow" style="background-color: dimgray;">Buy Now</span>
+<span id="buyNow" class="buyNow" style="background-color: dimgray;">Buy Now</span>
 {{/if}}

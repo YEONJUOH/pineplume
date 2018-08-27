@@ -1,27 +1,35 @@
-<table style="margin: 0 auto;width: 50%;border-collapse: collapse">
-    <tr>
-        <th></th>
-        <th>itemName</th>
-        <th>option</th>
-        <th>price</th>
-        <th>Qty</th>
-        <th>choice</th>
-    </tr>
-    {{for itemList}}
-    <tr>
-        <td><img src="{{:src}}" style="width: 30px;height: 30px"></td>
-        <td class="name">{{:name}}</td>
-        <td class="option">{{:option}}</td>
-        <td>{{:moneyString}}</td>
-        <td>1</td>
-        <td style="color: dimgray;font-style: italic" class="delete">delete</td>
-    </tr>
+<div style="width: 30%; margin: 0 auto;text-align: center;">
+    <h3>주문 내역</h3>
+    <div class="orderList">
+        {{for orderList}}
+        <div><img src="{{:src}}" style="width: 50px;height: 50px"></div>
+        <span>{{:name}}</span>(<span>{{:option}}</span>)-<span>{{:qty}}개</span>-<span>{{:moneyString}}</span>
+    <br/>
     {{/for}}
+    </div>
+    <br/>
+    <div><b>total:{{:total}}<i>(shippCost:￦2,500)</i></b></div>
+    <br/>
+    <hr/>
+</div>
+<div style="width: 30%; margin: 0 auto;text-align: left;">
+    <div>이름(*):</div>
+    <input class="necessary" id="orderName" style="height: 20px;width:100%;margin-left: 2px;"/><br/><br/>
+    <div>이메일(*):</div>
+    <input id="email" class="necessary" style="height: 20px;width:100%;margin-left: 2px;"/><br/><br/>
+    <div>연락처:</div>
+    <input style="height: 20px;margin-left: 2px;width:100%;"/><br/><br/>
+    <div>주소(*):</div>
+    <input class="necessary" style="height: 20px;width: 40%;" type="text" id="sample3_postcode" placeholder="우편번호">
+    <input class="necessary" style="height: 20px;" type="button" id="postcode" value="우편번호 찾기"><br>
 
-</table>
-<br/>
-<br/>
-{{if subTotal}}
-<span>Sub Total {{:subTotal}} + Shipping {{:shipCost}} = Total : {{:total}}</span>
-<span class="buyNow" style="background-color: dimgray;">Buy Now</span>
-{{/if}}
+    <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
+        <img src="//t1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap"
+             style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()"
+             alt="접기 버튼">
+    </div>
+    <input style="height: 20px;width: 100%" type="text" id="sample3_address" class="d_form large" placeholder="주소">
+    <input style="height: 20px;width:100%;" placeholder="상세주소"/>
+</div>
+<br/><br/>
+<div id="orderBtn" style="width:10%;margin: 0 auto;background-color: dimgray;" class="buyNow">주문 하기</div>

@@ -5,10 +5,12 @@ define([
     "jquery",
     "text!html/cart.html",
     "model/UtilModel",
+    "model/BuyModel",
     "jsrender"
 ], function ($,
              cart,
              util,
+             buy,
              jsrender) {
     function CartModel() {
         this.render = function () {
@@ -23,6 +25,7 @@ define([
                         for (var i = 0; i < data.itemList.length; i++) {
                             subTotal += Number(data.itemList[i].price);
                             data.itemList[i].moneyString = util.moneyString(data.itemList[i].price);
+                            data.itemList[i].qty = "1";
                         }
                     }
 
@@ -49,9 +52,20 @@ define([
                         $.ajax({
                             url:'/deleteCookie?name=' + name + '&option=' + option,
                             success:function(data){
+
                                 new CartModel().render();
                             }
                         })
+                    });
+
+                    $("#buyNow").click(function (e) {
+                        var result = {};
+                        result.orderList = data.itemList;
+                        result.total = data.total;
+
+                        buy.render(result);
+
+
                     });
 
 

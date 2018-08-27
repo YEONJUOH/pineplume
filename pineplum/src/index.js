@@ -6,10 +6,13 @@ require([
     "model/MenuModel",
     "model/ShopModel",
     "model/VintageModel",
-    "model/SideModel"
-], function (main, menu, shop, vintage, side) {
+    "model/SideModel",
+    "model/BuyModel"
+], function (main, menu, shop, vintage, side, buy) {
     main.render();
     menu.render();
     side.render();
+    //buy.render();
+
 
 });

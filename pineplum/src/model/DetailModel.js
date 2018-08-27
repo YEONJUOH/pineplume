@@ -6,11 +6,13 @@ define([
     "text!html/detail.html",
     "model/CartModel",
     "model/UtilModel",
+    "model/BuyModel",
     "jsrender"
 ], function ($,
              detail,
              cart,
              util,
+             buy,
              jsrender) {
     function DetailModel() {
         this.render = function (itemType, itemName) {
@@ -18,6 +20,7 @@ define([
                 .done(function (data) {
                     var items = data[itemType];
                     var item;
+                    var shipCost = 2500;
                     for (var i = 0; i < items.length; i++) {
                         if (items[i].itemName == itemName) {
                             item = items[i];
@@ -68,6 +71,18 @@ define([
 
 
                     $("#buyNow").click(function (e) {
+                        var result = {};
+                        item.moneyString = util.moneyString(item.price);
+                        item.qty = "1";
+                        item.option = $("select option:selected").val();
+                        item.name = item.itemName;
+
+                        var orderList = [];
+                        orderList.push(item);
+                        result.orderList = orderList;
+                        result.total = util.moneyString(Number(item.price) + Number(shipCost));
+
+                        buy.render(result);
 
 
                     });
