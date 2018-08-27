@@ -77,7 +77,7 @@ define([
             };
 
             $("#orderBtn").click(function (e) {
-                $("#orderBtn").css("background-color", "#f2f2f2");
+
                 var isValid = checkInput();
                 if(!isValid) {
                     alert("필수 값을 입력해주세요");
@@ -90,6 +90,7 @@ define([
                     return;
                 }
 
+                $("#orderBtn").css("background-color", "#f2f2f2");
                 $("#orderBtn").click(function (e) {
                     return null;
                 });
