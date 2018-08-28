@@ -90,7 +90,8 @@ define([
                     return;
                 }
 
-                $("#orderBtn").css("background-color", "#f2f2f2");
+                $("#orderBtn").css("color", "#f2f2f2");
+                $("#orderBtn").css("border", "#f2f2f2");
                 $("#orderBtn").click(function (e) {
                     return null;
                 });

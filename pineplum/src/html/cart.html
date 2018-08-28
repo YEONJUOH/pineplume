@@ -1,11 +1,11 @@
 <table style="margin: 0 auto;width: 50%;border-collapse: collapse">
     <tr>
         <th></th>
-        <th>itemName</th>
-        <th>option</th>
-        <th>price</th>
-        <th>Qty</th>
-        <th>choice</th>
+        <th>ITEMNAME</th>
+        <th>OPTION</th>
+        <th>PRICE</th>
+        <th>QTY</th>
+        <th>CHOICE</th>
     </tr>
     {{for itemList}}
     <tr>
@@ -23,5 +23,5 @@
 <br/>
 {{if subTotal && subTotal !='￦0'}}
 <span>Sub Total {{:subTotal}} + Shipping {{:shipCost}} = Total : {{:total}}</span>
-<span id="buyNow" class="buyNow" style="background-color: dimgray;">Buy Now</span>
+<span id="buyNow" class="buyNow">Buy Now</span>
 {{/if}}
