@@ -9,10 +9,11 @@ require([
     "model/SideModel",
     "model/BuyModel"
 ], function (main, menu, shop, vintage, side, buy) {
-    main.render();
-    menu.render();
+    //main.render();
+    //menu.render();
     side.render();
     //buy.render();
+    shop.render();
 
 
 });
